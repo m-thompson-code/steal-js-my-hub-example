@@ -43,5 +43,12 @@
       "myhub/puppies/puppies",
       "myhub/weather/weather"
     ]
+  },
+  "dependencies": {
+    "can": "^6.6.2",
+    "can-route": "^5.0.2",
+    "can-route-pushstate": "^6.0.0",
+    "can-stache-element": "^1.2.0",
+    "can-stache-route-helpers": "^2.0.0"
   }
 }
