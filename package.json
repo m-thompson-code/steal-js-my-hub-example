@@ -14,7 +14,6 @@
   "devDependencies": {
     "bootstrap": "^5.2.2",
     "http-server": "^14.1.1",
-    "jquery": "^3.6.1",
     "justifiedGallery": "^3.6.5",
     "steal": "^2.3.0",
     "steal-css": "^1.3.2",
@@ -23,7 +22,13 @@
     "steal-tools": "^2.3.0"
   },
   "steal": {
+    "babelOptions": {
+      "plugins": [
+        "transform-class-properties"
+      ]
+    },
     "plugins": [
+      "can",
       "steal-css",
       "steal-less"
     ],
@@ -48,7 +53,9 @@
     "can": "^6.6.2",
     "can-route": "^5.0.2",
     "can-route-pushstate": "^6.0.0",
+    "can-stache": "^5.1.1",
     "can-stache-element": "^1.2.0",
-    "can-stache-route-helpers": "^2.0.0"
+    "can-stache-route-helpers": "^2.0.0",
+    "jquery": "^3.6.1"
   }
 }
