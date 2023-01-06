@@ -26,8 +26,8 @@ class MyWeather extends StacheElement {
     return $.ajax({
       // url: `https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places%20where%20text%3D%22${city}%22)&format=json&diagnostics=true&callback=`,
       // source: https://open-meteo.com/en/docs#latitude=34.05&longitude=-118.24&daily=weathercode,temperature_2m_max,temperature_2m_min&temperature_unit=fahrenheit&timezone=America%2FLos_Angeles&past_days=7
-      url: `https://api.open-meteo.com/v1/forecast?latitude=34.05&longitude=-118.24&daily=temperature_2m_max,temperature_2m_min&temperature_unit=fahrenheit&timezone=America%2FLos_Angeles&past_days=7`,
-  }).then(function(response){
+      url: `https://api.open-meteo.com/v1/forecast?latitude=34.05&longitude=-118.24&daily=temperature_2m_max,temperature_2m_min&temperature_unit=fahrenheit&timezone=America%2FLos_Angeles&past_days=7`,  
+    }).then(function(response){
     return response.daily.time.map(function(date, i){
       const high = response.daily.temperature_2m_max[i];
       const low = response.daily.temperature_2m_min[i];
